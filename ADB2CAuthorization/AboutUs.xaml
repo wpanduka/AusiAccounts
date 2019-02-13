@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.AboutUs">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Margin="20,30,30,20" BackgroundColor="White" Opacity="0.5" CornerRadius="25" Grid.Column="0"  Grid.Row="0">
+
+                        <Label x:Name="lbldisplaymsg" Text="Our team consists of 10 years of experience in software development with a panel of overseas consultants on system architecture and design.
+
+                        The team also consists of  members with over 10 years of experience business operations, baking and healthcare for  multinationals and start-ups.
+
+                        This combination helps us bridge the gap between technology teams and cooperate consumers in understating the requirement  to deliver a truly effective product." TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                      
+                        
+                    </Frame>
+                    <!--<Image Source="cancel.png" Margin="-30,-20,0,0" Grid.Column="0" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End"/>-->
+                </Grid>
+
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

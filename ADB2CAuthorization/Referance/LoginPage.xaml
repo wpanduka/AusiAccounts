@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ADB2CAuthorization.LoginPage" Title="Login">
+	<StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="10,0,10,0">
+        <Label Text="Taxing and Accounting Services" FontAttributes="Bold" FontSize="58" TextColor="White"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>                
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Text="HOME" FontAttributes="Bold" FontSize="18" TextColor="White" HorizontalOptions="Start" Margin="10,0,0,0" BackgroundColor="Transparent" Clicked="Home_button"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="ABOUT US" FontAttributes="Bold" FontSize="18" TextColor="White" HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="About_button"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="INDEX" FontAttributes="Bold" FontSize="18" TextColor="White" HorizontalOptions="End" Margin="0,0,10,0" BackgroundColor="Transparent" Clicked="Index_bitton"/>
+        </Grid>
+        <Button x:Name="loginButton" Text="Sign In" Clicked="OnLoginButtonClicked" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+        <ActivityIndicator IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

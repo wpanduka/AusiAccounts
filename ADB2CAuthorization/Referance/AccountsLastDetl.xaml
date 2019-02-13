@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.AccountsLastDetl">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Confirmation" FontAttributes="Bold" FontSize="58" TextColor="White" Margin="20,0,0,0"/>
+                <Label Text="Request sent under" FontSize="28" TextColor="White" Margin="20,0,0,0"/>
+                <Label Text="Reference R00142" FontSize="28" TextColor="White" Margin="20,0,0,0" />
+                <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="CATEGORY" Grid.Row="0" Grid.Column="1"  FontSize="20" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                    <Label x:Name="CategoryTYP" Text="" FontSize="20" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"/>
+                    <Label Text="TOTAL AMOUNT" Grid.Row="1" Grid.Column="1"  FontSize="20" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                    <Label x:Name="TotalAmountTYP" Text="" FontSize="20" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" IsEnabled="False" Opacity="1" TextColor="White" BackgroundColor="Gray"/>
+                    <Label Text="GST AMOUNT" Grid.Row="2" Grid.Column="1"  FontSize="20" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                    <Label x:Name="GSTAmountTYP" Text="" FontSize="20" Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"/>
+                    <Label Text="ACCOUNT TYPE" Grid.Row="3" Grid.Column="1"  FontSize="20" HorizontalTextAlignment="Center" TextColor="White" BackgroundColor="DarkSlateGray"/>
+                    <Label x:Name="AccountTYP" Text="" FontSize="20" Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"/>
+                    <Button x:Name="AddButton" Text="ADD" FontSize="20" Grid.Row="4" Grid.Column="2" />
+                    <Label x:Name="Result"  Text="Ready for operation"  FontSize="20" Grid.Row="5" Grid.Column="2" FontAttributes="Bold" BackgroundColor="Gray" TextColor="White"/>
+
+                </Grid>
+                <Button x:Name="Recipts" Text="UPLOAD MORE RECIPTS" Clicked="Goback" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+                <Button x:Name="Close" Text="CLOSE"  Clicked="Closenow" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

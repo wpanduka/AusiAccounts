@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.Home_Page">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center" Padding="10,0,10,0">
+                <Grid Padding="0,10,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label  x:Name="messageLabel" FontSize="Large"  HorizontalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="0" />
+                    <Button  x:Name="logoutButton" Text="Logout" Clicked="logoutButton_Clicked" HorizontalOptions="End" Grid.Row="0" Grid.Column="1" />
+                </Grid>
+
+                <Label Text="What would you like to start with?" FontSize="28" TextColor="White"/>
+              
+                <Grid Padding="0,10,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <Frame BorderColor="White" BackgroundColor="Transparent" Grid.Row="0" Padding="0,0,0,0">
+                        <Button x:Name="PickButton" Text="View Receipts" TextColor="White" FontAttributes="Bold" Clicked="PickButton_Clicked" BackgroundColor="Transparent"  FontSize="25" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+
+                    <Frame BorderColor="White" BackgroundColor="Transparent" Grid.Row="1" Padding="0,0,0,0">
+                        <Button x:Name="UploadButton" Text="Submit Receipt" TextColor="White" FontAttributes="Bold" Clicked="UploadButton_Clicked" BackgroundColor="Transparent"  FontSize="25" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+
+                    <Frame BorderColor="White" BackgroundColor="Transparent" Grid.Row="2" Padding="0,0,0,0">
+                        <Button x:Name="TrackMilage" Text="Track Milage" TextColor="White" FontAttributes="Bold" Clicked="TrackMilage_Clicked" BackgroundColor="Transparent"  FontSize="25" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+
+                    <Frame BorderColor="White" BackgroundColor="Transparent" Grid.Row="3" Padding="0,0,0,0">
+                        <Button x:Name="LoyalityCard" Text="Loyality Card" TextColor="White" FontAttributes="Bold"  Clicked="LoyalityCard_Clicked" BackgroundColor="Transparent" FontSize="25" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

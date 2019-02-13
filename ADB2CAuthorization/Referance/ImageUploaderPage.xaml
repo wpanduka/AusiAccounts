@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.ImageUploaderPage">   
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Select"
+                     Clicked="Handle_Clicked"/>
+        </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="10,0,5,0">
+            <!--<Button x:Name="takepictireButton"
+                Clicked="takepicturebutton_clicked"
+                Text="takefromCamara"/>-->
+            <Button x:Name="uploadpictureButton" Text="Take Image And Upload" Clicked="UploadButton_clicked" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+            <Image x:Name="selectedImage" HeightRequest="500" Margin="10,0,10,0"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

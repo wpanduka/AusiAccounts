@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.ImagePickerPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <StackLayout VerticalOptions="StartAndExpand" >
+                    <Label Text="Receipt" FontAttributes="Bold" FontSize="46" TextColor="White" Margin="20,0,0,0"/>
+                    <Label Text="Fill up the details to proceed." FontSize="20" TextColor="White" Margin="20,0,0,0"/>
+                    <Frame BackgroundColor="Black"  CornerRadius="25"  VerticalOptions="StartAndExpand" Margin="20">
+                        <StackLayout Margin="5">
+                          
+                            <Label Text="Enter text:" FontSize="Medium" TextColor="White"/>
+                            <Picker x:Name="PickerCategory" Title="SELECT A CATEGORY" BackgroundColor="#e5e5d8" TextColor="Black">
+                                <Picker.Items>
+                                    <x:String>Ordinary Job</x:String>
+                                    <x:String>Sole Trader</x:String>
+                                    <x:String>Other Category</x:String>
+                                </Picker.Items>
+                            </Picker>
+                            <Label Text="Total Amount Including GST:" TextColor="White" />
+                            <Editor x:Name="txtTotGstAmount" HeightRequest="50" BackgroundColor="#e5e5d8" TextColor="Black"/>
+                            <Label Text="GST Amount:"  TextColor="White"/>
+                            <Editor x:Name="txtGstAmount" HeightRequest="50" BackgroundColor="#e5e5d8" TextColor="Black"/>
+                            <Label Text="Account:" TextColor="White" />
+                            <Picker x:Name="PickerAccount" Title="SELECT AN ACCOUNT" BackgroundColor="#e5e5d8" TextColor="Black">
+                                <Picker.Items>
+                                    <x:String>Work Cloths</x:String>
+                                    <x:String>Laundry</x:String>
+                                    <x:String>Petrol</x:String>
+                                    <x:String>Vehicle Expense</x:String>
+                                    <x:String>Other Category</x:String>
+                                </Picker.Items>
+                            </Picker>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblCamera" Text="Capture/Pick Up"  Grid.Row="0" Grid.Column="0" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,-40,0" TextColor="White" />
+                                <Image x:Name="imgcamera" Source="Apple_Camera.png" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="35" HeightRequest="35" Grid.Row="0" Grid.Column="1" Margin="0,0,-25,0"/>
+                            </Grid>
+
+
+                            <Image x:Name="selectedImage" HeightRequest="200" WidthRequest="200" Margin="10,0,10,0" IsVisible="False"/>
+
+
+
+                        </StackLayout>
+                    </Frame>
+                    <Grid Margin="15,0,0,20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="170"/>
+                            <ColumnDefinition Width="170"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" x:Name="uploadButton" Text="SUBMIT"  Margin="10,0,5,0" BackgroundColor="#e5e5d8" BorderColor="Gray" BorderWidth="1" FontSize="21" BorderRadius="15" Clicked="uploadButton_Clicked" Opacity="0.6" TextColor="Black" FontAttributes="Bold"/>
+                        <Button Grid.Row="0" Grid.Column="1" x:Name="uploadButtontwo" Text="CANCEL" Margin="10,0,5,0" BackgroundColor="#e5e5d8" BorderColor="Gray" BorderWidth="1" FontSize="21" BorderRadius="15" Clicked="uploadButtontwo_Clicked" Opacity="0.6" TextColor="Black" FontAttributes="Bold"/>
+                    </Grid>
+                    <ActivityIndicator x:Name="activityIndicator"  IsRunning="True" IsVisible="False"/>
+
+
+                </StackLayout>
+             
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

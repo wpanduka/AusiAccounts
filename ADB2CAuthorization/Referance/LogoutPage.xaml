@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ADB2CAuthorization.LogoutPage" Title="HOME">
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" Padding="10,0,10,0">
+            <Grid Padding="0,10,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  x:Name="messageLabel" FontSize="Large"  HorizontalOptions="Center" TextColor="White" Grid.Row="0" Grid.Column="0" />
+                <Button  x:Name="logoutButton" Text="Logout" Clicked="OnLogoutButtonClicked" HorizontalOptions="End" Grid.Row="0" Grid.Column="1" />
+            </Grid>
+
+            <!--<Label x:Name="messageLabel" FontSize="Large"  HorizontalOptions="Start" TextColor="White"/>-->
+            <!--<Button x:Name="logoutButton" Text="Logout" Clicked="OnLogoutButtonClicked" HorizontalOptions="Start" />-->
+            <Label Text="Home" FontAttributes="Bold" FontSize="58" TextColor="White"/>
+
+            <Label Text="What would you like to start with?" FontSize="38" TextColor="White"/>
+            <Button x:Name="PickButton" Text="Uploaded Images" Clicked="SelectButtonOnClick" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+            <Button x:Name="UploadButton" Text="Submit Recipt" Clicked="UploadButtonOnClick" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+            <Button x:Name="TrackMilage" Text="Track Milage" Clicked="ShowButtonOnClick" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+            <Button x:Name="LoyalityCard" Text="Loyality Card" Clicked="LoyalOnClicked" BackgroundColor="White" TextColor="Gray" FontSize="30"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

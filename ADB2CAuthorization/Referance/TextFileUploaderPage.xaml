@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADB2CAuthorization.TextFileUploaderPage">
+    <ScrollView>
+        <StackLayout VerticalOptions="StartAndExpand" >
+            <Label Text="Receipt" FontAttributes="Bold" FontSize="58" TextColor="White" Margin="20,0,0,0"/>
+            <Label Text="Fill up the details to proceed." FontSize="28" TextColor="White" Margin="20,0,0,0"/>
+            <Frame BackgroundColor="Ivory"  CornerRadius="25"  VerticalOptions="StartAndExpand" Margin="20">
+                <StackLayout Margin="20">
+                    <Label Text="Enter text:" FontSize="Medium"/>
+                    <Picker x:Name="PickerCategory" Title="SELECT A CATEGORY" BackgroundColor="#e5e5d8">
+                        <Picker.Items>
+                            <x:String>Ordinary Job</x:String>
+                            <x:String>Sole Trader</x:String>
+                            <x:String>Other Category</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Total Amount Including GST:" />
+                    <Editor x:Name="Entername" HeightRequest="50" BackgroundColor="#e5e5d8"/>
+                    <Label Text="GST Amount:" />
+                    <Editor x:Name="uploadEditor" HeightRequest="50" BackgroundColor="#e5e5d8"/>
+                    <Label Text="Account:" />
+                    <Picker x:Name="thePicker" Title="SELECT AN ACCOUNT" BackgroundColor="#e5e5d8">
+                        <Picker.Items>
+                            <x:String>Work Cloths</x:String>
+                            <x:String>Laundry</x:String>
+                            <x:String>Petrol</x:String>
+                            <x:String>Vehicle Expense</x:String>
+                            <x:String>Other Category</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="uploadButton" Text="SELECT" Clicked="OnUploadButtonClicked" Margin="10,0,5,0" BackgroundColor="#e5e5d8" BorderColor="Gray" BorderWidth="1" FontSize="21" BorderRadius="15"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="uploadButtontwo" Text="CANCEL" Margin="10,0,5,0" BackgroundColor="#e5e5d8" BorderColor="Gray" BorderWidth="1" FontSize="21" BorderRadius="15"/>
+            </Grid>
+            <ActivityIndicator x:Name="activityIndicator" />
+            <!--<Button x:Name="downloadButton" Text="Download" Clicked="OnDownloadButtonClicked" IsEnabled="false" />-->
+            <!--<Editor x:Name="downloadEditor" HeightRequest="100" IsEnabled="false" />-->
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
