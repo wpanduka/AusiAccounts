@@ -2,9 +2,9 @@
 {
 	public static class Constants
 	{
-		public static string ApplicationID = "5695f366-955a-4019-bf79-351f5fe51564";
+		public static string ApplicationID = "APP ID";
 		public static string[] Scopes = { ApplicationID };
-		public static string SignUpSignInPolicy = "B2C_1_SiUpIn";
+		public static string SignUpSignInPolicy = "POLICY";
 		public static string ResetPasswordPolicy = "<INSERT_ADB2C_POLICY_NAME_HERE>";
         //	public static string Authority = "https://login.microsoftonline.com/tfp/oauth2/nativeclient";
 
